@@ -1,7 +1,41 @@
 .btn {
+  padding: 12px;
+  border-radius: 8px;
+  background: $black;
+  color: $white;
+  transition: $defTransitionTime;
+  &_icon {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+  }
   &__icon {
+    svg {
+      width: 24px;
+      height: 24px;
+      path {
+        transition: $defTransitionTime;
+      }
+    }
   }
 
   &__caption {
+    font-family: $mainFont;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.36px;
+  }
+  &:hover {
+    color: $black;
+    background-color: $white;
+    outline: 1px solid $black;
+    path {
+      fill: $black;
+    }
+  }
+  &:active {
+    transform: scale(0.95);
   }
 }

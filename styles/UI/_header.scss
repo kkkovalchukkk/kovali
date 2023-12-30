@@ -7,12 +7,16 @@
   }
 
   &__logo {
-    margin-top: auto;
     &-link {
+      position: relative;
       display: flex;
       align-items: center;
       gap: 8px;
       align-items: flex-end;
+    }
+    &-year {
+      position: absolute;
+      right: -25px - 8px;
     }
   }
 
@@ -23,6 +27,7 @@
   }
 
   &__nav-link {
+    position: relative;
     color: $black;
     font-family: $mainFont;
     font-size: 18px;
@@ -30,13 +35,23 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.36px;
+    &:hover {
+      color: $brandColor;
+    }
   }
 
   &__social-link {
     margin-right: 12px;
   }
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
 
   &__tel-link {
     margin-right: 28px;
+  }
+  &__btn {
+    padding-right: 51px;
   }
 }
