@@ -1,0 +1,287 @@
+@font-face {
+  font-family: "Suisse Intl";
+  font-weight: 300;
+  src: url("../assets/fonts/SuisseIntl/SuisseIntl-Light.otf");
+}
+@font-face {
+  font-family: "Suisse Intl";
+  font-style: italic;
+  font-weight: 300;
+  src: url("../assets/fonts/SuisseIntl/SuisseIntl-LightItalic.otf");
+}
+@font-face {
+  font-family: "Suisse Intl";
+  font-weight: 400;
+  src: url("../assets/fonts/SuisseIntl/SuisseIntl-Regular.otf");
+}
+@font-face {
+  font-family: "Suisse Intl";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../assets/fonts/SuisseIntl/SuisseIntl-RegularItalic.otf");
+}
+@font-face {
+  font-family: "Suisse Intl";
+  font-weight: 500;
+  src: url("../assets/fonts/SuisseIntl/SuisseIntl-Medium.otf");
+}
+@font-face {
+  font-family: "Suisse Intl";
+  font-style: italic;
+  font-weight: 500;
+  src: url("../assets/fonts/SuisseIntl/SuisseIntl-MediumItalic.otf");
+}
+@font-face {
+  font-family: "Suisse Intl";
+  font-weight: 600;
+  src: url("../assets/fonts/SuisseIntl/SuisseIntl-SemiBold.otf");
+}
+@font-face {
+  font-family: "Suisse Intl";
+  font-style: italic;
+  font-weight: 600;
+  src: url("../assets/fonts/SuisseIntl/SuisseIntl-SemiBoldItalic.otf");
+}
+@font-face {
+  font-family: "Suisse Intl";
+  font-weight: 700;
+  src: url("../assets/fonts/SuisseIntl/SuisseIntl-Bold.otf");
+}
+@font-face {
+  font-family: "Suisse Intl";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../assets/fonts/SuisseIntl/SuisseIntl-BoldItalic.otf");
+}
+@font-face {
+  font-family: "Suisse Intl";
+  font-weight: 900;
+  src: url("../assets/fonts/SuisseIntl/SuisseIntl-Book.otf");
+}
+@font-face {
+  font-family: "Suisse Intl";
+  font-style: italic;
+  font-weight: 900;
+  src: url("../assets/fonts/SuisseIntl/SuisseIntl-BlackItalic.otf");
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  font-family: "Suisse Intl", sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 1344px;
+  padding: 0px 16px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  margin-top: 22px;
+  margin-bottom: 164px;
+}
+.header__wrapper {
+  justify-content: space-between;
+}
+.header__logo {
+  margin-top: auto;
+}
+.header__logo-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-items: flex-end;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.header__nav-link {
+  color: #111;
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+.header__social-link {
+  margin-right: 12px;
+}
+.header__tel-link {
+  margin-right: 28px;
+}
+
+.logo {
+  width: 107px;
+  height: 17.258px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.tel-link {
+  color: #ff7707;
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,42 @@
+.header {
+  width: 100%;
+  margin-top: 22px;
+  margin-bottom: 164px;
+  &__wrapper {
+    justify-content: space-between;
+  }
+
+  &__logo {
+    margin-top: auto;
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      align-items: flex-end;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__nav-link {
+    color: $black;
+    font-family: $mainFont;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.36px;
+  }
+
+  &__social-link {
+    margin-right: 12px;
+  }
+
+  &__tel-link {
+    margin-right: 28px;
+  }
+}
