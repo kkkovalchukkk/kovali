@@ -838,14 +838,140 @@
     font-weight: 400;
     line-height: normal;
   }
-
-  &__copyrights {
-  }
-
   &__policy-link {
     transition: $defTransitionTime;
     &:hover {
       color: $brandColor;
+    }
+  }
+}
+
+.articles-section {
+  margin-bottom: 88px;
+  &__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+  }
+
+  &__date-filter {
+    width: 100%;
+    height: 92px;
+    margin-bottom: 72px;
+  }
+
+  &__swiper-slide {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: end;
+  }
+
+  &__date-filter-link {
+    width: fit-content;
+    color: rgba($color: $black, $alpha: 0.4);
+    font-family: $mainFont;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -1.84px;
+    transition: $defTransitionTime;
+    &:hover {
+      color: $brandColor;
+    }
+    &.active {
+      color: $black;
+      font-family: $mainFont;
+      font-size: 92px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 92px */
+      letter-spacing: -3.68px;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  &__list-item {
+    width: 100%;
+    &-heading {
+      color: $black;
+      font-family: $mainFont;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 95%; /* 30.4px */
+      letter-spacing: -0.64px;
+    }
+  }
+
+  &__list-item-link-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 24px;
+  }
+
+  &__list-item-img-wrapper {
+    width: 100%;
+    height: 636px;
+    overflow: hidden;
+    border-radius: 24px;
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__list-item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: $defTransitionTime;
+  }
+
+  &__pagination {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__pagination-link {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $black;
+    font-family: $mainFont;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.32px;
+    border-radius: 50%;
+    transition: $defTransitionTime;
+    &:hover {
+      background-color: rgba($color: $brandColor, $alpha: 0.5);
+    }
+    &.active {
+      color: $white;
+      background-color: $brandColor;
     }
   }
 }
