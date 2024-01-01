@@ -275,13 +275,12 @@ body {
   line-height: 95%;
   letter-spacing: -2.56px;
 }
-.subheading_brand {
+.subheading_brand, .subheading span {
   color: #ff7707;
 }
 .subheading_white {
   color: #fff;
 }
-
 .btn {
   padding: 12px;
   border-radius: 8px;
@@ -848,4 +847,296 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
   margin: 0 auto;
+}
+
+.projects-section {
+  margin-top: 80px;
+  margin-bottom: 161px;
+}
+.projects-section__wrapper {
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.projects-section__info {
+  max-width: 528px;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: start;
+  gap: 40px;
+}
+.projects-section__tabs {
+  position: relative;
+  width: 100%;
+}
+.projects-section__tab {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 40px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.43s;
+}
+.projects-section__tab.active {
+  opacity: 1;
+  visibility: visible;
+}
+.projects-section__tab-text {
+  color: #111;
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: -0.56px;
+}
+.projects-section__tab-subtext {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: -0.56px;
+}
+.projects-section__swiper {
+  width: 100%;
+  max-width: 666px;
+  border-radius: 16px;
+  padding-bottom: 29px;
+  overflow: hidden;
+  margin: 0;
+}
+.projects-section__swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 119, 7, 0.4);
+  opacity: 1;
+}
+.projects-section__swiper .swiper-pagination-bullet-active {
+  background-color: #ff7707;
+}
+.projects-section__swiper-slide {
+  position: relative;
+}
+.projects-section__swiper-slide::after {
+  content: "";
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url("../assets/img/slide-lines.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 11;
+}
+.projects-section__swiper-navigation {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 0px 24px;
+}
+.projects-section__swiper-nav-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.43s;
+}
+.projects-section__swiper-nav-btn:hover {
+  transform: scale(1.1);
+}
+.projects-section__swiper-nav-btn:active {
+  transform: scale(0.95);
+}
+.projects-section__swiper-pagination {
+  width: 100%;
+}
+.projects-section__swiper-slide {
+  width: 100%;
+}
+.projects-section__swiper-slide-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-button-disabled {
+  opacity: 0.4;
+}
+
+.contacts-section__wrapper {
+  justify-content: space-between;
+  gap: 16px;
+}
+.contacts-section__info {
+  width: 100%;
+  max-width: 535px;
+}
+.contacts-section__info-header {
+  width: 100%;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ebebeb;
+}
+.contacts-section__info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+.contacts-section__info-item_large {
+  gap: 21px;
+}
+.contacts-section__info-item-heading {
+  color: #ff7707;
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.contacts-section__info-address {
+  color: #111;
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 38.4px */
+  letter-spacing: -0.32px;
+}
+.contacts-section__info-body {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px;
+  padding: 70px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+.contacts-section__info-item-link {
+  font-size: 18px;
+  transition: 0.43s;
+}
+.contacts-section__info-item-link:hover {
+  color: #ff7707;
+}
+.contacts-section__info-text {
+  font-size: 18px;
+}
+.contacts-section__info-text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 4px;
+}
+.contacts-section__socials {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.contacts-section__info-footer {
+  width: 100%;
+  padding-top: 24px;
+}
+.contacts-section__profile {
+  width: 100%;
+  max-width: 474px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.contacts-section__profile-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.contacts-section__profile-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 8px;
+}
+.contacts-section__profile-heading {
+  color: #ff7707;
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: -0.48px;
+}
+.contacts-section__profile-text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 2px;
+}
+.contacts-section__profile-text, .contacts-section__profile-link {
+  color: #111;
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 26px */
+  letter-spacing: -0.4px;
+}
+.contacts-section__map {
+  width: 100%;
+  max-width: 666px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.footer {
+  width: 100%;
+  margin-top: 108px;
+  padding: 21px 0;
+  background: #f8f8f8;
+}
+.footer__wrapper {
+  gap: 16px;
+  justify-content: space-between;
+}
+.footer__text {
+  color: #999;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer__policy-link {
+  transition: 0.43s;
+}
+.footer__policy-link:hover {
+  color: #ff7707;
 }/*# sourceMappingURL=index.css.map */

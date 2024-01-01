@@ -60,4 +60,7 @@ body {
   &_white {
     color: $white;
   }
+  span {
+    @extend .subheading_brand;
+  }
 }
