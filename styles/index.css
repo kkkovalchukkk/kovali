@@ -1315,6 +1315,17 @@ body {
   list-style-position: outside;
   margin-left: 15px;
 }
+.article-section__text-content ul {
+  list-style-type: disc;
+  margin-left: 15px;
+  list-style-position: outside;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 12px;
+  margin-bottom: 32px;
+}
 .article-section__text-content img {
   width: 100%;
   margin-top: 72px;
@@ -1575,4 +1586,168 @@ body {
 .catalog-section__pagination {
   margin-top: 40px;
   margin-left: 296px;
+}
+
+.item-section__wrapper {
+  align-items: flex-start;
+  gap: 40px;
+}
+.item-section__content {
+  max-width: 733px;
+}
+.item-section__content-img {
+  width: 100%;
+  height: 577px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.item-section__text-content h2 {
+  margin-top: 64px;
+  margin-bottom: 24px;
+  color: rgba(17, 17, 17, 0.4);
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  text-transform: uppercase;
+}
+.item-section__text-content p {
+  margin-bottom: 16px;
+}
+.item-section__text-content p span,
+.item-section__text-content p a {
+  color: #ff7707;
+}
+.item-section__text-content p a {
+  transition: 0.43s;
+}
+.item-section__text-content p a:hover {
+  text-decoration: underline;
+}
+.item-section__text-content p,
+.item-section__text-content li {
+  color: #111;
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 26px */
+  letter-spacing: -0.4px;
+}
+.item-section__text-content ul {
+  list-style-type: disc;
+  margin-left: 15px;
+  list-style-position: outside;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.item-section__text-content ol {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 12px;
+  list-style-type: decimal;
+  list-style-position: outside;
+  margin-left: 15px;
+}
+.item-section__text-content img {
+  width: 100%;
+  margin-top: 72px;
+  margin-bottom: 96px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.item-section__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+}
+.item-section__info-heading {
+  margin-bottom: 24px;
+  color: #111;
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 41.6px */
+  letter-spacing: -0.64px;
+}
+.item-section__price {
+  margin-bottom: 40px;
+  color: #ff7707;
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+.item-section__info-item {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 12px;
+}
+.item-section__info-item-heading {
+  color: #111;
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+.item-section__info-item-list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.item-section__info-item-list-link {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #ebebeb;
+  color: #111;
+  font-family: Suisse Intl;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.36px;
+  transition: 0.43s;
+}
+.item-section__info-item-list-link:hover {
+  border-color: #ff7707;
+}
+.item-section__info-item-list-link.active {
+  border-color: #ff7707;
+}
+.item-section__info-color-link {
+  padding-left: 67px;
+  color: #111;
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.36px;
+  background-image: url("../assets/img/color.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
 }/*# sourceMappingURL=index.css.map */
