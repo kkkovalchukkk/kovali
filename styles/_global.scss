@@ -10,8 +10,12 @@
 }
 
 body {
+  position: relative;
   min-width: 320px;
   font-family: $mainFont;
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 .wrapper {
