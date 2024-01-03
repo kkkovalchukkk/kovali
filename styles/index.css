@@ -2361,6 +2361,7 @@ body.no-scroll {
   }
   .catalog-section__filters {
     max-width: unset;
+    position: static;
   }
   .catalog-section__filters-list {
     display: grid;

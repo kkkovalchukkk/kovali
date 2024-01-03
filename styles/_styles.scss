@@ -2224,6 +2224,7 @@
     }
     &__filters {
       max-width: unset;
+      position: static;
       &-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
