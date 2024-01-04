@@ -1,7 +1,14 @@
 .header {
   width: 100%;
-  margin-top: 22px;
-  margin-bottom: 164px;
+  padding-top: 22px;
+  padding-bottom: 24px;
+  margin-bottom: 164px - 24px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  background-color: $white;
+
   &__wrapper {
     justify-content: space-between;
   }

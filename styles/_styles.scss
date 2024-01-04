@@ -1,3 +1,7 @@
+.main {
+  margin-top: 230px;
+}
+
 .logo {
   width: 107px;
   height: 17.258px;
@@ -29,7 +33,6 @@
   z-index: 20;
   padding: 32px;
   top: 67px;
-  display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: start;
@@ -40,6 +43,7 @@
   opacity: 0;
   border-top: 1px solid rgba($color: $gray, $alpha: 0.2);
   transition: $defTransitionTime;
+  display: none;
   &.active {
     transform: translateX(0%);
     opacity: 1;
@@ -1196,7 +1200,7 @@
     max-width: 250px;
     position: sticky;
     left: 0;
-    top: 0;
+    top: 96px;
     padding-top: 32px;
   }
 
@@ -1290,6 +1294,7 @@
     height: 16px;
     border-radius: 4px;
     border: 1px solid $brandColor;
+    flex-shrink: 0;
   }
 
   &__filter-reset-btn {
@@ -1478,6 +1483,9 @@
   }
 
   &__info {
+    position: sticky;
+    right: 0;
+    top: 96px;
     // flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -1810,8 +1818,15 @@
 }
 
 @media (max-width: 1096px) {
+  .main {
+    margin-top: 100px;
+  }
+  .mobile-menu {
+    display: flex;
+  }
   .header {
-    margin-top: 0;
+    padding: 0;
+    margin: 0;
     &__btn,
     &__nav {
       display: none;
