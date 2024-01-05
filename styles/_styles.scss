@@ -202,6 +202,15 @@
           color: $white;
         }
       }
+      &.view {
+        video {
+          opacity: 1;
+        }
+        .advantages-section__list-item-subheading,
+        .advantages-section__list-item-count {
+          color: $white;
+        }
+      }
     }
 
     &_image {
@@ -212,8 +221,20 @@
             opacity: 1;
           }
         }
+        &.view {
+          background-color: $black;
+          .advantages-section__list-item-bg {
+            opacity: 1;
+          }
+        }
       }
       &:hover {
+        .advantages-section__list-item-subheading,
+        .advantages-section__list-item-count {
+          color: $white;
+        }
+      }
+      &.view {
         .advantages-section__list-item-subheading,
         .advantages-section__list-item-count {
           color: $white;
@@ -256,6 +277,7 @@
     line-height: normal;
     letter-spacing: -0.48px;
     transition: $defTransitionTime;
+    z-index: 4;
   }
 
   &__list-item-count {
@@ -267,6 +289,7 @@
     line-height: normal;
     letter-spacing: -1.56px;
     transition: $defTransitionTime;
+    z-index: 4;
   }
 
   &__list-item-video {
@@ -1391,8 +1414,9 @@
 
 .item-section {
   &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: flex-start;
-    flex-direction: column;
     gap: 40px;
   }
   &__row {
@@ -1491,6 +1515,9 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: start;
+    &-img {
+      display: none;
+    }
   }
 
   &__info-heading {
@@ -2114,12 +2141,15 @@
         max-width: 240px;
       }
     }
-  }
-  .item-section {
     &__row {
       flex-direction: column;
       align-items: flex-start;
       justify-content: start;
+    }
+    &__info {
+      &-heading {
+        font-size: 24px;
+      }
     }
     &__content {
       &-img {
@@ -2218,6 +2248,31 @@
       max-width: 190px;
     }
   }
+
+  .item-section {
+    &__wrapper {
+      gap: 16px;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &__content {
+      &-img {
+        display: none;
+      }
+    }
+    &__info {
+      position: static;
+      &-img {
+        display: initial;
+        width: 100%;
+      }
+      &-item {
+        &-list {
+          align-items: flex-start;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 525px) {
@@ -2276,6 +2331,10 @@
       width: 48px;
       height: 48px;
     }
+  }
+  .mobile-menu {
+    height: calc(100% - 51px);
+    top: 51px;
   }
 }
 

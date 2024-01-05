@@ -157,7 +157,7 @@
                                 class="advantages-section__list-item-img">
                         </li>
                         <li
-                            class="advantages-section__list-item advantages-section__list-item_count advantages-section__list-item_video">
+                            class="advantages-section__list-item advantages-section__list-item_count advantages-section__list-item_video anim-on-view">
                             <h4 class="advantages-section__list-item-subheading">
                                 Успешной работы <span class="advantages-section__list-item-count">
                                     15 лет
@@ -169,7 +169,7 @@
                             </video>
                         </li>
                         <li
-                            class="advantages-section__list-item advantages-section__list-item_count advantages-section__list-item_image advantages-section__list-item_image-black">
+                            class="advantages-section__list-item advantages-section__list-item_count advantages-section__list-item_image advantages-section__list-item_image-black anim-on-view">
                             <h4 class="advantages-section__list-item-subheading">
                                 Готовых видов покрытий <span class="advantages-section__list-item-count">
                                     296
@@ -179,7 +179,7 @@
                                 class="advantages-section__list-item-bg advantages-section__list-item-bg_80">
                         </li>
                         <li
-                            class="advantages-section__list-item advantages-section__list-item_count advantages-section__list-item_image advantages-section__list-item_image-black">
+                            class="advantages-section__list-item advantages-section__list-item_count advantages-section__list-item_image advantages-section__list-item_image-black anim-on-view">
                             <h4 class="advantages-section__list-item-subheading">
                                 Корпоративных клиентов <span class="advantages-section__list-item-count">
                                     97
@@ -313,7 +313,7 @@
                                 Уровень адгезиия
                             </h5>
                             <p class="dev-section__list-item-hidden-text">
-                                Сила сцепления с поверхностью 
+                                Сила сцепления с поверхностью
                             </p>
                             <img src="./assets/img/adgezia.png" alt="" class="dev-section__list-item-img">
                         </li>
@@ -586,6 +586,21 @@
                 }
             }
         })
+        const animEls = document.querySelectorAll(".anim-on-view")
+
+        const callback = (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("view")
+                }
+            })
+        }
+        const myObserver = new IntersectionObserver(callback)
+        if (window.innerWidth <= 1024) {
+            animEls.forEach(card => myObserver.observe(card))
+        }
+
+
     </script>
 </body>
 
