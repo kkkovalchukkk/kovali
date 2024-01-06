@@ -1,7 +1,7 @@
 import articles from './articles.js';
 
-const articlesSectionSwiperWrapperEl = document.querySelector(
-  '.articles-section__swiper-wrapper'
+const articlesSectionDatefilterEl = document.querySelector(
+  '.articles-section__date-filter'
 );
 const articlesListEl = document.querySelector('.articles-section__list');
 
@@ -13,21 +13,20 @@ for (let key in articles) {
     isActive = true;
   }
 
-  articlesSectionSwiperWrapperEl.innerHTML += ` <div class="swiper-slide articles-section__swiper-slide">
+  articlesSectionDatefilterEl.innerHTML += ` 
                                 <a href="#" class="articles-section__date-filter-link ${
                                   isActive ? 'active' : ''
                                 }">
                                     ${key}
-                                </a>
-                            </div>`;
+                                </a>`;
   articleIdx++;
-
-  articles[key].map((art) => {
-    articlesListEl.insertAdjacentHTML(
-      'beforeend',
-      `
+}
+articles[2022].map((art) => {
+  articlesListEl.insertAdjacentHTML(
+    'beforeend',
+    `
     <li class="articles-section__list-item">
-        <a href="/article.html?year=${key}&id=${art.id}" class="articles-section__list-item-link-wrapper">
+        <a href="/article.html?year=2022&id=${art.id}" class="articles-section__list-item-link-wrapper">
             <div class="articles-section__list-item-img-wrapper">
                 <img src="${art.img}" alt="${art.title}" class="articles-section__list-item-img">
             </div>
@@ -38,11 +37,38 @@ for (let key in articles) {
     </li>
     
     `
-    );
-  });
-}
+  );
+});
 
-const articlesSectionSwiper = new Swiper('.articles-section__date-filter', {
-  slidesPerView: 'auto',
-  spaceBetween: 40,
+articlesSectionDatefilterEl.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A') {
+    e.preventDefault();
+    articlesSectionDatefilterEl
+      .querySelectorAll('a')
+      .forEach((a) => a.classList.remove('active'));
+    e.target.classList.add('active');
+    articlesListEl.textContent = '';
+    articles[+e.target.textContent].map((art) => {
+      articlesListEl.insertAdjacentHTML(
+        'beforeend',
+        `
+    <li class="articles-section__list-item">
+        <a href="/article.html?year=${+e.target.textContent}&id=${
+          art.id
+        }" class="articles-section__list-item-link-wrapper">
+            <div class="articles-section__list-item-img-wrapper">
+                <img src="${art.img}" alt="${
+          art.title
+        }" class="articles-section__list-item-img">
+            </div>
+            <p class="articles-section__list-item-heading">
+                ${art.title}
+            </p>
+        </a>
+    </li>
+    
+    `
+      );
+    });
+  }
 });

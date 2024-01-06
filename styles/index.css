@@ -1292,6 +1292,11 @@ body.no-scroll {
   width: 100%;
   height: 92px;
   margin-bottom: 72px;
+  display: flex;
+  align-items: end;
+  gap: 32px;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 .articles-section__swiper-slide {
   width: -moz-fit-content;
@@ -1425,6 +1430,7 @@ body.no-scroll {
   margin-top: 36px;
   margin-bottom: 24px;
   color: #999;
+  font-family: "Suisse Intl", sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
