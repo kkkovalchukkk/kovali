@@ -317,24 +317,8 @@
             </div>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script>
-            const headerBurgerBtnEl = document.querySelector('.header__burger-btn');
-            const mobileMenuEl = document.querySelector('.mobile-menu');
-
-            headerBurgerBtnEl.addEventListener('click', () => {
-                if (mobileMenuEl.classList.contains('active')) {
-                    mobileMenuEl.classList.remove('active');
-                    document.body.classList.remove('no-scroll')
-                } else {
-                    mobileMenuEl.classList.add('active');
-                    document.body.classList.add('no-scroll')
-                }
-            })
-            const articlesSectionSwiper = new Swiper('.articles-section__date-filter', {
-                slidesPerView: 'auto',
-                spaceBetween: 40,
-            })
-        </script>
+        <script src="./scripts/burger-menu.js"></script>
+        <script src="./scripts/article-swiper.js"></script>
     </div>
 </body>
 

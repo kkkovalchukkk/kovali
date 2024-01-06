@@ -43,7 +43,7 @@
         </div>
         <header class="header">
             <div class="wrapper header__wrapper">
-                <a href="#" class="header__logo-link">
+                <a href="./index.html" class="header__logo-link">
                     <img src="./assets/img/logo.png" alt="Краски KOVALI" class="logo header__logo">
                     <span class="header__logo-year">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
@@ -120,10 +120,10 @@
             <section class="navigation-section">
                 <div class="wrapper navigation-section__wrapper">
                     <div class="breadcrumbs">
-                        <a href="#" class="breadcrumbs__link">
+                        <a href="./index.html" class="breadcrumbs__link">
                             Главная
                         </a>
-                        <a href="#" class="breadcrumbs__link active">
+                        <a href="./catalog.html" class="breadcrumbs__link active">
                             Каталог
                         </a>
                     </div>
@@ -143,29 +143,24 @@
                                     </div>
                                     <div class="catalog-section__filter-content">
                                         <label class="catalog-section__filter-label">
-                                            <input type="checkbox" name="filter" id="" style="display: none;">
-                                            <div class="catalog-section__filter-checkbox"></div>
-                                            Грунт-эмаль
-                                        </label>
-                                        <label class="catalog-section__filter-label">
-                                            <input type="checkbox" name="filter" id="" style="display: none;">
+                                            <input data-id="1" type="checkbox" name="filter" id="" style="display: none;">
                                             <div class="catalog-section__filter-checkbox"></div>
                                             Грунт
                                         </label>
                                         <label class="catalog-section__filter-label">
-                                            <input type="checkbox" name="filter" id="" style="display: none;">
+                                            <input data-id="2" type="checkbox" name="filter" id="" style="display: none;">
+                                            <div class="catalog-section__filter-checkbox"></div>
+                                            Грунт-эмаль
+                                        </label>
+                                        <label class="catalog-section__filter-label">
+                                            <input data-id="3" type="checkbox" name="filter" id="" style="display: none;">
                                             <div class="catalog-section__filter-checkbox"></div>
                                             Эмаль
                                         </label>
                                         <label class="catalog-section__filter-label">
-                                            <input type="checkbox" name="filter" id="" style="display: none;">
+                                            <input data-id="4" type="checkbox" name="filter" id="" style="display: none;">
                                             <div class="catalog-section__filter-checkbox"></div>
                                             Предварительная обработка
-                                        </label>
-                                        <label class="catalog-section__filter-label">
-                                            <input type="checkbox" name="filter" id="" style="display: none;">
-                                            <div class="catalog-section__filter-checkbox"></div>
-                                            Сопутствующие товары
                                         </label>
                                     </div>
                                 </div>
@@ -177,7 +172,7 @@
                     </div>
                     <div class="catalog-section__body">
                         <ul class="catalog-section__list">
-                            <li class="catalog-section__list-item">
+                            <!-- <li class="catalog-section__list-item">
                                 <a href="#" class="catalog-section__list-item-wrapper">
                                     <div class="catalog-section__list-item-img-wrapper">
                                         <img src="./assets/img/грунт-эмаль.png"
@@ -284,9 +279,9 @@
                                         Грунт-эмаль KOVALI PROF алкидная тиксотропная по металлу
                                     </h3>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
-                        <div class="pagination catalog-section__pagination">
+                        <!-- <div class="pagination catalog-section__pagination">
                             <a href="#" class="pagination__link active">
                                 1
                             </a>
@@ -299,7 +294,7 @@
                             <a href="#" class="pagination__link">
                                 4
                             </a>
-                        </div>
+                        </div> -->
                     </div>
 
                 </div>
@@ -436,54 +431,8 @@
                 </a>
             </div>
         </footer>
-        <script>
-            const headerBurgerBtnEl = document.querySelector('.header__burger-btn');
-            const mobileMenuEl = document.querySelector('.mobile-menu');
-
-            headerBurgerBtnEl.addEventListener('click', () => {
-                if (mobileMenuEl.classList.contains('active')) {
-                    mobileMenuEl.classList.remove('active');
-                    document.body.classList.remove('no-scroll')
-                } else {
-                    mobileMenuEl.classList.add('active');
-                    document.body.classList.add('no-scroll')
-                }
-            })
-
-            const filterEls = document.querySelectorAll('.catalog-section__filter');
-
-            const resetAllFilters = () => {
-                filterEls.forEach((f, idx) => {
-                    const content = f.querySelector('.catalog-section__filter-content');
-                    f.classList.remove('active')
-                    content.style.maxHeight = 0 + 'px';
-                })
-
-            }
-
-
-
-            filterEls.forEach((f, idx) => {
-                const header = f.querySelector('.catalog-section__filter-header');
-                const content = f.querySelector('.catalog-section__filter-content');
-
-                header.addEventListener('click', () => {
-                    if (f.classList.contains('active')) {
-                        f.classList.remove('active')
-                        content.style.maxHeight = 0 + 'px';
-                    } else {
-                        resetAllFilters();
-                        f.classList.add('active')
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                    }
-                })
-            })
-
-            filterEls[0].classList.add('active')
-            filterEls[0].querySelector('.catalog-section__filter-content').style.maxHeight = filterEls[0].querySelector('.catalog-section__filter-content').scrollHeight + 'px';
-
-
-        </script>
+        <script src="./scripts/burger-menu.js"></script>
+        <script type="module" src="./scripts/catalog.js"></script>
     </div>
 </body>
 
