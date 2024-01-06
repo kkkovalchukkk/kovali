@@ -26,6 +26,7 @@ if (card) {
   articleContentImgEl.alt = card.title;
   articleInfoImgEl.alt = card.title;
   activeBreadCrumbLinkEl.textContent = card.title;
+  activeBreadCrumbLinkEl.href = window.location.href;
   articleHeadingEl.textContent = card.title;
   articlePriceEl.textContent = card.price.toLocaleString() + ' ₽';
 
