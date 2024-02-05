@@ -102,10 +102,10 @@ const callback = (entries, observer) => {
 };
 const myObserver = new IntersectionObserver(callback);
 
-const ownerObserver = new IntersectionObserver();
+// const ownerObserver = new IntersectionObserver();
 
 if (window.innerWidth <= 1024) {
   animEls.forEach((card) => myObserver.observe(card));
 }
 
-ownerObserver.observe(ownerSectionEl);
+// ownerObserver.observe(ownerSectionEl);
