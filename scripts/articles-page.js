@@ -9,24 +9,27 @@ let articleIdx = 0;
 
 for (let key in articles) {
   let isActive;
-  if (articleIdx === 0) {
+  if (articleIdx === 1) {
     isActive = true;
   }
-
-  articlesSectionDatefilterEl.innerHTML += ` 
+  articlesSectionDatefilterEl.insertAdjacentHTML(
+    'afterbegin',
+    ` 
                                 <a href="#" class="articles-section__date-filter-link ${
                                   isActive ? 'active' : ''
                                 }">
                                     ${key}
-                                </a>`;
+                                </a>`
+  );
+
   articleIdx++;
 }
-articles[2022].map((art) => {
+articles[2023].map((art) => {
   articlesListEl.insertAdjacentHTML(
     'beforeend',
     `
     <li class="articles-section__list-item">
-        <a href="/article.html?year=2022&id=${art.id}" class="articles-section__list-item-link-wrapper">
+        <a href="/article.html?year=2023&id=${art.id}" class="articles-section__list-item-link-wrapper">
             <div class="articles-section__list-item-img-wrapper">
                 <img src="${art.img}" alt="${art.title}" class="articles-section__list-item-img">
             </div>

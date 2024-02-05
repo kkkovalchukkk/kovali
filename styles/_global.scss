@@ -12,13 +12,26 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+
 body {
   position: relative;
   min-width: 320px;
   font-family: $mainFont;
+  background-color: $white;
   &.no-scroll {
     overflow: hidden;
   }
+}
+section {
+  background-color: $white;
 }
 
 .wrapper {

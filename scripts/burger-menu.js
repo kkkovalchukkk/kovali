@@ -10,3 +10,10 @@ headerBurgerBtnEl.addEventListener('click', () => {
     document.body.classList.add('no-scroll');
   }
 });
+
+mobileMenuEl.querySelectorAll('a').forEach((a) =>
+  a.addEventListener('click', () => {
+    mobileMenuEl.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+  })
+);
