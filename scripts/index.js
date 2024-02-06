@@ -39,6 +39,7 @@ aboutMessageEls.forEach((m) => {
 window.addEventListener(
   'scroll',
   function () {
+    if (window.innerWidth <= 1096) return;
     var st = window.pageYOffset || document.documentElement.scrollTop;
     if (st > lastScrollTop) {
       document.querySelector('.header').classList.add('hidden');
@@ -100,6 +101,7 @@ const instrumentSectionSwiper = new Swiper('.instruments-section__swiper', {
       });
     },
   },
+  
   navigation: {
     prevEl: '.instruments-section__swiper-navigation-btn-left',
     nextEl: '.instruments-section__swiper-navigation-btn-right',
@@ -131,7 +133,7 @@ let observer = new IntersectionObserver(function (entries, observer) {
 
 observer.observe(document.querySelector('.owner-section__review'));
 
-if (window.innerWidth <= 1024) {
+if (window.innerWidth <= 1280) {
   animEls.forEach((card) => myObserver.observe(card));
 }
 
@@ -147,5 +149,10 @@ const cardInterval = setInterval(() => {
   );
   slides.forEach((s) => s.classList.remove('active'));
   slides[curentBgIdx].classList.add('active');
-  curentBgIdx++;
+
+  if (instrumentsBg.length - 1 == curentBgIdx) {
+    curentBgIdx = 0;
+  } else {
+    curentBgIdx++;
+  }
 }, 5000);

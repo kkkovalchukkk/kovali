@@ -360,6 +360,9 @@ section {
 .header__wrapper {
   justify-content: space-between;
 }
+.header__mobile-btn {
+  display: none;
+}
 .header__logo-link {
   position: relative;
   display: flex;
@@ -455,7 +458,7 @@ section {
 .line {
   fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke: #ff7707;
+  stroke: #111;
   stroke-width: 6;
   stroke-linecap: round;
 }
@@ -498,7 +501,7 @@ section {
   padding: 32px;
   top: 67px;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: start;
   overflow-y: auto;
   gap: 32px;
@@ -517,7 +520,7 @@ section {
 .mobile-menu__nav {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: start;
   gap: 24px;
 }
@@ -2111,9 +2114,6 @@ section {
     width: 220px;
     height: 220px;
   }
-  .advantages-section__list {
-    grid-template-rows: repeat(2, 374px);
-  }
   .advantages-section__list-item {
     padding: 32px 24px;
   }
@@ -2128,9 +2128,6 @@ section {
   }
   .advantages-section__list-item-img {
     max-width: 196px;
-  }
-  .about-section {
-    padding: 0;
   }
   .about-section__wrapper {
     margin-bottom: 64px;
@@ -2262,8 +2259,14 @@ section {
   .mobile-menu {
     display: flex;
   }
-  .footer {
-    padding-bottom: 100px;
+  .advantages-section {
+    top: 31px;
+  }
+  .instruments-section {
+    transform: translateY(-20px);
+  }
+  .instruments-section__swiper-slide-text {
+    font-size: 20px;
   }
   .header {
     padding: 0;
@@ -2272,16 +2275,21 @@ section {
   .header__nav {
     display: none;
   }
+  .header__logo-link {
+    margin-right: 50px;
+  }
   .header__btn {
-    position: fixed;
-    right: 32px;
-    bottom: 32px;
+    display: none;
+  }
+  .header__mobile-btn {
+    display: flex;
   }
   .header__burger-btn {
     display: block;
+    margin-left: auto;
   }
-  .header__wrapper {
-    padding-right: 0;
+  .video-section {
+    top: 67px;
   }
   .catalog-section__wrapper {
     gap: 24px;
@@ -2291,6 +2299,11 @@ section {
   }
   .catalog-section__list-item-img-wrapper {
     height: 132px;
+  }
+  .advantages-section__list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 256px;
+    grid-template-rows: none;
   }
 }
 @media (max-width: 1024px) {
@@ -2565,6 +2578,9 @@ section {
   }
 }
 @media (max-width: 575px) {
+  .header__menu {
+    display: none;
+  }
   .catalog-section__filters {
     max-width: 190px;
   }

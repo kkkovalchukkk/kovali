@@ -30,6 +30,8 @@ if (card) {
   articleHeadingEl.textContent = card.title;
   articlePriceEl.textContent = card.price.toLocaleString() + ' ₽';
 
+  console.log(card);
+
   if (card.weight) {
     articleInfoListEl.insertAdjacentHTML(
       'beforeend',
@@ -54,6 +56,10 @@ if (card) {
     );
   }
 
+  if (card.prices) {
+    articlePriceEl.textContent = card.prices[card.weight[0]] + ' ₽';
+  }
+
   if (card.category === 4) {
     articleColorLinkEl.remove();
   }
@@ -67,5 +73,14 @@ articleInfoListEl.addEventListener('click', (e) => {
       .querySelectorAll('button')
       .forEach((a) => a.classList.remove('active'));
     e.target.classList.add('active');
+
+    if (card.prices) {
+      const priceIdx = e.target.textContent.trim().slice(0, 3);
+      if (!priceIdx.includes(',')) {
+        articlePriceEl.textContent = card.prices[+priceIdx] + ' ₽';
+        return;
+      }
+      articlePriceEl.textContent = card.prices[priceIdx] + ' ₽';
+    }
   }
 });

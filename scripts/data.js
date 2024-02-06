@@ -68,8 +68,13 @@ const data = [
     </ol>
       `,
     link: 'https://kovali.ru/catalog/gruntovki/po_metallu_antikorroziynye/28102/',
-    price: 18530,
-    weight: ['0,8', '2,4', '10', '25'],
+    price: 840,
+    prices: {
+      '0,8': 840,
+      '2,4': 2430,
+      10: 8510,
+    },
+    weight: ['0,8', '2,4', '10'],
   },
   {
     id: 2,
@@ -133,8 +138,14 @@ const data = [
     </ol>
     `,
     link: 'https://kovali.ru/catalog/gruntovki/po_metallu_antikorroziynye/33241/?oid=33243',
-    price: 19640,
-    weight: ['0,8', '2,4', '15'],
+    price: 670,
+    prices: {
+      '0,52': 670,
+      '0,8': 1668,
+      '2,4': 4680,
+      15: 19640,
+    },
+    weight: ['0,52', '0,8', '2,4', '15'],
   },
   {
     id: 3,
@@ -235,7 +246,10 @@ const data = [
 <p><i>Как самостоятельное покрытие не используется!</i></p>
     `,
     link: 'https://kovali.ru/catalog/gruntovki/po_metallu_antikorroziynye/34377/?oid=34378',
-    price: 5130,
+    prices: {
+      10: 5130,
+      25: 11070,
+    },
     weight: ['10', '25'],
   },
   {
@@ -292,6 +306,10 @@ const data = [
     `,
     link: 'https://kovali.ru/catalog/promyshlennye_pokrytiya/34360/',
     price: 13905,
+    prices: {
+      10: 6060,
+      25: 12490,
+    },
     weight: ['10', '25'],
   },
   {
@@ -367,6 +385,10 @@ const data = [
     textCategory: 'Грунт-эмаль',
     img: 'assets/img/грунты/7.png',
     price: 12780,
+    prices: {
+      10: 6670,
+      20: 10140,
+    },
     description: `
     <h2>
     НАЗНАЧЕНИЕ:
@@ -403,7 +425,7 @@ const data = [
     </p>
     `,
     link: 'https://kovali.ru/catalog/promyshlennye_pokrytiya/34383/?oid=34396',
-    weight: ['20'],
+    weight: ['10', '20'],
   },
   {
     id: 8,
@@ -472,7 +494,13 @@ const data = [
     `,
     link: 'https://kovali.ru/catalog/kraski_emali_dlya_naruzhnykh_rabot/po_metallu_i_rzhavchine/31791/?oid=31815',
     price: 1146,
-    weight: ['0,8', '2,4', '10'],
+    prices: {
+      '0,5': 485,
+      '0,8': 898,
+      '2,4': 2408,
+      10: 8814,
+    },
+    weight: ['0,5', '0,8', '2,4', '10'],
   },
   {
     id: 9,
@@ -539,7 +567,12 @@ const data = [
     `,
     link: 'https://kovali.ru/catalog/kraski_emali_dlya_naruzhnykh_rabot/po_metallu_i_rzhavchine/28116/',
     price: 1190,
-    weight: ['0,8', '2,4', '8', '20'],
+    prices: {
+      '0,8': 1190,
+      '2,4': 3340,
+      8: 9880,
+    },
+    weight: ['0,8', '2,4', '8'],
   },
   {
     id: 10,
@@ -610,7 +643,12 @@ const data = [
     `,
     link: 'https://kovali.ru/catalog/kraski_emali_dlya_naruzhnykh_rabot/po_metallu_i_rzhavchine/28117/',
     price: 1135,
-    weight: ['0,77', '2,25', '10'],
+    prices: {
+      '0,8': 1135,
+      '2,4': 3190,
+      10: 14410,
+    },
+    weight: ['0,8', '2,4', '10'],
   },
   {
     id: 11,
@@ -679,6 +717,11 @@ const data = [
     `,
     link: 'https://kovali.ru/catalog/kraski_emali_dlya_naruzhnykh_rabot/po_metallu_i_rzhavchine/28113/',
     price: 7750,
+    prices: {
+      '0,8': 930,
+      '2,4': 2660,
+      10: 9200,
+    },
     weight: ['0,8', '2,4', '10'],
   },
   {
@@ -748,7 +791,13 @@ const data = [
     `,
     link: 'https://kovali.ru/catalog/kraski_emali_dlya_naruzhnykh_rabot/termostoykie/28120/',
     price: 1190,
-    weight: ['0,8', '2,4', '10', '25'],
+    prices: {
+      '0,52': 590,
+      '0,8': 1190,
+      '2,4': 3420,
+      10: 12440,
+    },
+    weight: ['0,52', '0,8', '2,4', '10'],
   },
   {
     id: 13,

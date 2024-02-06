@@ -16,6 +16,9 @@
   &__wrapper {
     justify-content: space-between;
   }
+  &__mobile-btn {
+    display: none;
+  }
 
   &__logo {
     &-link {
@@ -113,7 +116,7 @@
 .line {
   fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke: $brandColor;
+  stroke: $black;
   stroke-width: 6;
   stroke-linecap: round;
 }

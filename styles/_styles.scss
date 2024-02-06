@@ -34,7 +34,7 @@
   padding: 32px;
   top: 67px;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: start;
   overflow-y: auto;
   gap: 32px;
@@ -52,7 +52,7 @@
   &__nav {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: start;
     gap: 24px;
     &-link {
@@ -1924,7 +1924,7 @@
 
   .advantages-section {
     &__list {
-      grid-template-rows: repeat(2, 374px);
+      // grid-template-rows: repeat(2, 374px);
       &-item {
         padding: 32px 24px;
         &-heading {
@@ -1943,7 +1943,7 @@
     }
   }
   .about-section {
-    padding: 0;
+    // padding: 0;
     &__wrapper {
       margin-bottom: 64px;
     }
@@ -2113,8 +2113,18 @@
     display: flex;
   }
 
-  .footer {
-    padding-bottom: 100px;
+  .advantages-section {
+    top: 31px;
+  }
+  .instruments-section {
+    transform: translateY(-20px);
+    &__swiper {
+      &-slide {
+        &-text {
+          font-size: 20px;
+        }
+      }
+    }
   }
   .header {
     padding: 0;
@@ -2122,18 +2132,33 @@
     &__nav {
       display: none;
     }
-    &__btn {
-      position: fixed;
-      right: 32px;
-      bottom: 32px;
+    &__logo-link {
+      margin-right: 50px;
     }
+    &__btn {
+      // position: fixed;
+      // right: 32px;
+      // bottom: 32px;
+      display: none;
+    }
+
+    &__mobile-btn {
+      display: flex;
+    }
+
     &__burger-btn {
       display: block;
+      margin-left: auto;
     }
     &__wrapper {
-      padding-right: 0;
+      // padding-right: 0;
     }
   }
+
+  .video-section {
+    top: 67px;
+  }
+
   .catalog-section {
     &__wrapper {
       gap: 24px;
@@ -2150,6 +2175,14 @@
           // height: 320px;
         }
       }
+    }
+  }
+
+  .advantages-section {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-rows: 256px;
+      grid-template-rows: none;
     }
   }
 }
@@ -2515,6 +2548,12 @@
 }
 
 @media (max-width: 575px) {
+  .header {
+    &__menu {
+      display: none;
+    }
+  }
+
   .catalog-section {
     &__filters {
       max-width: 190px;
