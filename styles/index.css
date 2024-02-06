@@ -352,6 +352,10 @@ section {
   top: 0;
   z-index: 99999;
   background-color: #fff;
+  transition: 0.43s;
+}
+.header.hidden {
+  transform: translateY(-100%);
 }
 .header__wrapper {
   justify-content: space-between;
@@ -541,7 +545,7 @@ section {
   width: 100%;
   position: sticky;
   left: 0;
-  top: 96px;
+  top: 0;
   z-index: -1;
 }
 .video-section__video-wrapper {
@@ -1335,6 +1339,7 @@ section {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  transform: rotate(16deg);
 }
 .contacts-section__profile-body {
   display: flex;

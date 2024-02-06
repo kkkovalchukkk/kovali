@@ -8,6 +8,10 @@
   top: 0;
   z-index: 99999;
   background-color: $white;
+  transition: $defTransitionTime;
+  &.hidden {
+    transform: translateY(-100%);
+  }
 
   &__wrapper {
     justify-content: space-between;

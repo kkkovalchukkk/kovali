@@ -5,6 +5,10 @@ const instrumentsBg = [
   'instrument-bg-4',
   'instrument-bg-5',
 ];
+let curentBgIdx = 0;
+let a = 0;
+let lastScrollTop = 0;
+
 const instrumentSectionEl = document.querySelector('.instruments-section');
 
 const aboutMessageEls = document.querySelectorAll(
@@ -31,6 +35,20 @@ aboutMessageEls.forEach((m) => {
     });
   });
 });
+
+window.addEventListener(
+  'scroll',
+  function () {
+    var st = window.pageYOffset || document.documentElement.scrollTop;
+    if (st > lastScrollTop) {
+      document.querySelector('.header').classList.add('hidden');
+    } else if (st < lastScrollTop) {
+      document.querySelector('.header').classList.remove('hidden');
+    }
+    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+  },
+  false
+);
 
 const projectSectionSwiper = new Swiper('.projects-section__swiper', {
   slidesPerView: 1,
@@ -65,7 +83,8 @@ const instrumentSectionSwiper = new Swiper('.instruments-section__swiper', {
   centeredSlide: true,
   on: {
     click(e) {
-      instrumentSectionEl.style.backgroundImage = `url(../assets/img/${
+      clearInterval(cardInterval);
+      instrumentSectionEl.style.backgroundImage = `url(./assets/img/${
         instrumentsBg[e.clickedIndex]
       }.jpg)`;
       const slides = document.querySelectorAll(
@@ -91,21 +110,42 @@ const animEls = document.querySelectorAll('.anim-on-view');
 
 const callback = (entries, observer) => {
   entries.forEach((entry) => {
-    if (entry.target === ownerSectionEl) {
-      entry.target.classList.add('view');
-      return;
-    }
     if (entry.isIntersecting) {
       setTimeout(() => entry.target.classList.add('view'), 1600);
     }
   });
 };
+
+const callbacktwo = (entries, observer) => {
+  entries.forEach((e) => {
+    e.target.classList.add('view');
+  });
+};
+
 const myObserver = new IntersectionObserver(callback);
 
-// const ownerObserver = new IntersectionObserver();
+let observer = new IntersectionObserver(function (entries, observer) {
+  a !== 0 && ownerSectionEl.classList.add('view');
+  a++;
+});
+
+observer.observe(document.querySelector('.owner-section__review'));
 
 if (window.innerWidth <= 1024) {
   animEls.forEach((card) => myObserver.observe(card));
 }
 
-// ownerObserver.observe(ownerSectionEl);
+instrumentSectionEl.style.backgroundImage = `url(./assets/img/${instrumentsBg[curentBgIdx]}.jpg)`;
+const slides = document.querySelectorAll('.instruments-section__swiper-slide');
+slides.forEach((s) => s.classList.remove('active'));
+slides[curentBgIdx].classList.add('active');
+
+const cardInterval = setInterval(() => {
+  instrumentSectionEl.style.backgroundImage = `url(./assets/img/${instrumentsBg[curentBgIdx]}.jpg)`;
+  const slides = document.querySelectorAll(
+    '.instruments-section__swiper-slide'
+  );
+  slides.forEach((s) => s.classList.remove('active'));
+  slides[curentBgIdx].classList.add('active');
+  curentBgIdx++;
+}, 5000);

@@ -84,7 +84,7 @@
   width: 100%;
   position: sticky;
   left: 0;
-  top: 96px;
+  top: 0;
   z-index: -1;
   &__video-wrapper {
     position: relative;
@@ -1080,6 +1080,7 @@
     overflow: hidden;
     object-fit: cover;
     object-position: center;
+    transform: rotate(16deg);
   }
 
   &__profile-body {
