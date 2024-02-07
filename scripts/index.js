@@ -71,7 +71,7 @@ const projectSectionSwiper = new Swiper('.projects-section__swiper', {
 });
 
 const instrumentSectionSwiper = new Swiper('.instruments-section__swiper', {
-  slidesPerView: 3,
+  slidesPerView: 'auto',
   spaceBetween: 8,
   speed: 30000,
   freeMode: true,
@@ -101,7 +101,18 @@ const instrumentSectionSwiper = new Swiper('.instruments-section__swiper', {
       });
     },
   },
-  
+  // breakpoints: {
+  //   1240: {
+  //     slidesPerView: 3,
+  //   },
+  //   769: {
+  //     slidesPerView: 2,
+  //   },
+  //   320: {
+  //     slidesPerView: 1,
+  //   },
+  // },
+
   navigation: {
     prevEl: '.instruments-section__swiper-navigation-btn-left',
     nextEl: '.instruments-section__swiper-navigation-btn-right',
