@@ -531,6 +531,9 @@ section {
 .mobile-menu__nav-link {
   font-size: 18px;
 }
+.mobile-menu__nav-link_active {
+  color: #ff7707;
+}
 .mobile-menu__btn {
   width: -moz-fit-content;
   width: fit-content;
@@ -2477,28 +2480,8 @@ section {
   .advantages-section__list-item {
     height: 270px;
   }
-  .about-section__overlay {
-    min-height: 520px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .about-section__overlay-message {
-    position: static;
-    padding: 0;
-    background: none;
-    margin-right: auto;
-  }
-  .about-section__overlay-message:last-child {
-    margin-left: auto;
-    margin-right: 0;
-  }
-  .about-section__overlay-popup {
-    left: 0;
-    right: 0;
-    top: 100px !important;
-    margin: 0 auto;
+  .about-section__card-heading {
+    font-size: 14px;
   }
   .articles-section__date-filter-link {
     font-size: 32px;
